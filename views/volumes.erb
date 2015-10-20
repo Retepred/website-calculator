@@ -1,0 +1,13 @@
+<h3><p>This section can be used to work out the volume of a cone, and a cylinder. Because why the hell not.</h3>
+<h3>Please only put cylinder or cone into the operator slot. Or I will find you. And hurt you.</h3>
+<% if @volumes %>
+<h1>The result is.... <%= @volumes %></h1>
+
+<% end %>
+
+<form method="get" action="/volumes">
+<input type="number" name="radius_number" placeholder="radius number">
+<input type="text" name="shape" placeholder="cylinder or cone" value="<%= @shape %>">
+<input type="number" name="height_number" placeholder="height number">
+<button>CALCULATE DEM NUMS</button>
+</form>

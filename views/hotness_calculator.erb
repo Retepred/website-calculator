@@ -1,0 +1,13 @@
+<h3>This calculator will tell you your hotness rating. This is measured in the national hotness scale of 1-10, with 10 being "bed me now" and 1 being "shoot me now".</h3>
+<p></p>
+<h3>On a scale of 1-10, how much do people turn around in the street to stare at you? 10 is all the time an 1 is never.</h3>
+
+<% if @hotness_calculator %>
+<h1>The result is.... <%= @hotness_calculator %></h1>
+
+<% end %>
+
+<form method="get" action="/hotness_calculator">
+
+<input type="number" name="street_looking" placeholder="1-10">
+<button>CALCULATE DEM NUMS</button>

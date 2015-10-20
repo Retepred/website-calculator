@@ -1,0 +1,13 @@
+<h3><p>The following symbols can be used in this calculator: + - / * for basic calculations. You can use ** to calculate the first number to the power of the second number. Filling in the first number adding √ (by pressing alt+v) to the operator and leaving the second number clear will give you the square root.</h3>
+<h3>Please understand I'm writing these instructions because I have absolutely no faith in your ability to work these simple things out for yourself...</h3>
+<% if @result %>
+
+<h1>The result is.... <%= @result %></h1>
+<% end %>
+
+<form method="get" action="/super_calculator">
+<input type="number" name="first_number" placeholder="first number" step="0.01" value="<%= @first_number %>">
+<input type="text" name="operator" placeholder="operator" value="<%= @operator %>">
+<input type="number" step="0.01" name="second_number" placeholder="second number" value="<%= @second_number %>">
+<button>CALCULATE DEM NUMS</button>
+</form>
