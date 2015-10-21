@@ -50,8 +50,9 @@ end
 
 get '/hotness_calculator' do
   @street_looking = params[:street_looking].to_f
+  @mirror_looking = params[:mirror_looking].to_f
 
-  @hotness_calculator = @street_looking
+  @hotness_calculator = @street_looking * @mirror_looking /10
 
 erb :hotness_calculator
 end  
